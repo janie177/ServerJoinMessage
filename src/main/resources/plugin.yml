@@ -1,0 +1,4 @@
+main: com.minegusta.serverjoinmessage.Main
+name: ServerJoinMessage
+version: ${project.version}
+author: janie177
