@@ -18,13 +18,13 @@ public class Main extends JavaPlugin implements Listener
         Bukkit.getPluginManager().registerEvents(this, this);
     }
 
-    @EventHandler(priority = EventPriority.NORMAL)
+    @EventHandler(priority = EventPriority.HIGH)
     public void onJoin(PlayerJoinEvent e)
     {
         e.setJoinMessage(ChatColor.valueOf(this.getConfig().getString("name-color", "GRAY")) + e.getPlayer().getName() + " " + ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("join-message", "joined the game.")));
     }
 
-    @EventHandler(priority = EventPriority.NORMAL)
+    @EventHandler(priority = EventPriority.HIGH)
     public void onLeave(PlayerQuitEvent e)
     {
         e.setQuitMessage(ChatColor.valueOf(this.getConfig().getString("name-color", "GRAY")) + e.getPlayer().getName() +" " + ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("leave-message", "left the game.")));
